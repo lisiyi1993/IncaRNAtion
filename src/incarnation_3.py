@@ -762,7 +762,7 @@ def equiprob_profile(n):
       profile = tuple(prob for _ in range(n))
       return profile
 
-def all_probabilities(profile,ref_seq, stuct, alpha):
+def all_probabilities(profile,ref_seq, struct, alpha):
   n = len(struct)
   results = []
   for i in range(n):
@@ -776,8 +776,9 @@ def all_probabilities(profile,ref_seq, stuct, alpha):
   return results
 
 def display_all_probabilities(results):
-  for x in results:
-    print(x[0],x[1],x[2],x[3])
+  print('p_A p_C p_G p_U')
+  for pos, x in enumerate(results):
+    print('pos {}: {} {} {} {}'.format(pos+1, x[0], x[1], x[2], x[3]))
 
 def gc_content(sequence,structure=None):
   if not structure:

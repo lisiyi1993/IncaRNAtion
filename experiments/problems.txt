@@ -1,0 +1,5 @@
+1. Display of the profile is not clear. One should add index at the first line, for example p_A p_C p_G p_U which means probability of ACGU. And at the each following line, one should add the which position is that line for. (Problem is solved in the current repository)
+2. For the option -s_gc <target_gc> <nb_samples>, the number of output samples does not match with the nb_samples input. For example, setting nb_samples to be 100 at the begging, -s_gc 0.5 100, may result about 400 resulting sequence.
+3. If option -s_gc is not given, what would be the default <target_gc> and <nb_samples>
+4. what is stochasticly backtracked sequence?
+5. The result of the option -gc_data <file_name> is not clear
